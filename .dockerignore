@@ -1,0 +1,11 @@
+node_modules
+dist
+build
+coverage
+.git
+.cache
+.env*
+!.env.example
+*.log
+.DS_Store
+server.js
