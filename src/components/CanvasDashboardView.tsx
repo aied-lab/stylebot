@@ -200,8 +200,8 @@ export const CanvasDashboardView: React.FC<CanvasDashboardViewProps> = ({
             onClick={handlePlayVoice}
             className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm transition shadow-lg ${
               isSpeaking
-                ? 'bg-amber-400 text-neutral-950 animate-pulse shadow-amber-400/30'
-                : 'bg-gradient-to-r from-amber-500 to-amber-600 text-neutral-950 hover:from-amber-400 hover:to-amber-500 shadow-amber-500/20'
+                ? 'bg-sage-400 text-neutral-950 animate-pulse shadow-black/20'
+                : 'bg-gradient-to-r from-sage-500 to-sage-600 text-neutral-950 hover:from-sage-400 hover:to-sage-500 shadow-black/20'
             }`}
           >
             {isSpeaking ? (
@@ -226,7 +226,7 @@ export const CanvasDashboardView: React.FC<CanvasDashboardViewProps> = ({
               return (
                 <div
                   key={idx}
-                  className="w-1 bg-amber-400 rounded-full transition-all duration-75"
+                  className="w-1 bg-sage-400 rounded-full transition-all duration-75"
                   style={{
                     height: `${currentScale * 100}%`,
                     opacity: isSpeaking ? 0.9 : 0.3,
@@ -242,7 +242,7 @@ export const CanvasDashboardView: React.FC<CanvasDashboardViewProps> = ({
             <select
               value={selectedVoice}
               onChange={(e) => setSelectedVoice(e.target.value as any)}
-              className="bg-transparent text-amber-400 font-medium focus:outline-none cursor-pointer"
+              className="bg-transparent text-sage-400 font-medium focus:outline-none cursor-pointer"
             >
               <option value="Kore" className="bg-neutral-900 text-white">
                 Kore (高雅女聲)
@@ -273,7 +273,7 @@ export const CanvasDashboardView: React.FC<CanvasDashboardViewProps> = ({
                   onClick={() => setCurrentTheme(tId)}
                   className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition ${
                     isSelected
-                      ? 'bg-amber-400 text-neutral-950 shadow'
+                      ? 'bg-sage-400 text-neutral-950 shadow'
                       : 'text-neutral-400 hover:text-white'
                   }`}
                   title={theme.name}
@@ -290,7 +290,7 @@ export const CanvasDashboardView: React.FC<CanvasDashboardViewProps> = ({
             title="開關背景網格"
             className={`p-2 rounded-xl border transition ${
               showGrid
-                ? 'bg-neutral-800 text-amber-400 border-amber-400/30'
+                ? 'bg-neutral-800 text-sage-400 border-sage-400/30'
                 : 'bg-neutral-950 text-neutral-400 border-neutral-800 hover:text-white'
             }`}
           >
@@ -304,7 +304,7 @@ export const CanvasDashboardView: React.FC<CanvasDashboardViewProps> = ({
           >
             {copied ? (
               <>
-                <Check className="w-3.5 h-3.5 text-emerald-400" />
+                <Check className="w-3.5 h-3.5 text-sage-400" />
                 已複製畫布
               </>
             ) : (
@@ -336,13 +336,13 @@ export const CanvasDashboardView: React.FC<CanvasDashboardViewProps> = ({
       </div>
 
       {/* Spoken Commentary Quote Box */}
-      <div className="w-full max-w-5xl mb-6 bg-gradient-to-r from-amber-500/10 via-neutral-900 to-amber-500/5 border border-amber-500/25 rounded-2xl p-4 flex items-start gap-3 shadow-lg">
-        <div className="p-2 rounded-xl bg-amber-400/20 text-amber-400 shrink-0 mt-0.5">
+      <div className="w-full max-w-5xl mb-6 bg-gradient-to-r from-sage-500/10 via-neutral-900 to-sage-500/5 border border-sage-500/25 rounded-2xl p-4 flex items-start gap-3 shadow-lg">
+        <div className="p-2 rounded-xl bg-sage-400/20 text-sage-400 shrink-0 mt-0.5">
           <Sparkles className="w-4 h-4" />
         </div>
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs font-bold text-amber-400 uppercase tracking-widest">
+            <span className="text-xs font-bold text-sage-400 uppercase tracking-widest">
               AI 造型師現場語音講評
             </span>
             <span className="text-[11px] text-neutral-400">• 點擊上方按鈕隨時重播</span>
@@ -365,7 +365,7 @@ export const CanvasDashboardView: React.FC<CanvasDashboardViewProps> = ({
 
           {/* Floating Canvas Watermark / Quick Action Pill */}
           <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 text-[11px] text-neutral-300 font-mono flex items-center gap-2 pointer-events-none">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-sage-400 animate-pulse" />
             CANVAS 2D ENGINE • 1200x1600 RETINA
           </div>
         </div>

@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
+@theme {
+  --color-sage-50: #f1f7f4;
+  --color-sage-100: #dfeee6;
+  --color-sage-200: #bfd9cb;
+  --color-sage-300: #a2cab6;
+  --color-sage-400: #86b9a1;
+  --color-sage-500: #639b81;
+  --color-sage-600: #3e7b60;
+  --color-sage-700: #2e604a;
+  --color-sage-800: #254b3c;
+  --color-sage-900: #1d382e;
+  --color-sage-950: #101e19;
+  --color-neutral-950: #0d1411;
+  --color-neutral-900: #161f1b;
+  --color-neutral-800: #29372f;
+  --color-neutral-700: #405248;
+  --color-neutral-600: #62776b;
+  --color-neutral-500: #84978d;
+  --color-neutral-400: #a4b5ab;
+  --color-neutral-300: #c4d0c9;
+  --color-neutral-100: #edf3ef;
+  --font-serif: 'Noto Serif TC', Georgia, serif;
+}
+
 @layer utilities {
   @keyframes fadeIn {
     from {
@@ -20,4 +44,3 @@
 body {
   font-family: 'Plus Jakarta Sans', 'Noto Sans TC', system-ui, -apple-system, sans-serif;
 }
-

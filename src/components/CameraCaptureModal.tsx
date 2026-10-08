@@ -153,7 +153,7 @@ export const CameraCaptureModal: React.FC<CameraCaptureModalProps> = ({
         {/* Modal Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-neutral-800 bg-neutral-950/60">
           <div className="flex items-center space-x-3">
-            <div className="p-2 bg-amber-500/10 rounded-xl border border-amber-500/20 text-amber-400">
+            <div className="p-2 bg-sage-500/10 rounded-xl border border-sage-500/20 text-sage-400">
               <Camera className="w-5 h-5" />
             </div>
             <div>
@@ -179,7 +179,7 @@ export const CameraCaptureModal: React.FC<CameraCaptureModalProps> = ({
               }}
               className={`flex items-center gap-2 px-4 py-2 text-sm font-medium border-b-2 transition ${
                 activeTab === 'camera'
-                  ? 'border-amber-400 text-amber-400'
+                  ? 'border-sage-400 text-sage-400'
                   : 'border-transparent text-neutral-400 hover:text-neutral-200'
               }`}
             >
@@ -193,7 +193,7 @@ export const CameraCaptureModal: React.FC<CameraCaptureModalProps> = ({
               }}
               className={`flex items-center gap-2 px-4 py-2 text-sm font-medium border-b-2 transition ${
                 activeTab === 'upload'
-                  ? 'border-amber-400 text-amber-400'
+                  ? 'border-sage-400 text-sage-400'
                   : 'border-transparent text-neutral-400 hover:text-neutral-200'
               }`}
             >
@@ -207,7 +207,7 @@ export const CameraCaptureModal: React.FC<CameraCaptureModalProps> = ({
               }}
               className={`flex items-center gap-2 px-4 py-2 text-sm font-medium border-b-2 transition ${
                 activeTab === 'samples'
-                  ? 'border-amber-400 text-amber-400'
+                  ? 'border-sage-400 text-sage-400'
                   : 'border-transparent text-neutral-400 hover:text-neutral-200'
               }`}
             >
@@ -222,13 +222,13 @@ export const CameraCaptureModal: React.FC<CameraCaptureModalProps> = ({
           {/* Captured Preview Mode */}
           {capturedPreview ? (
             <div className="w-full flex flex-col items-center gap-4">
-              <div className="relative rounded-xl overflow-hidden border-2 border-amber-500/40 shadow-xl max-h-[460px] bg-neutral-950">
+              <div className="relative rounded-xl overflow-hidden border-2 border-sage-500/40 shadow-xl max-h-[460px] bg-neutral-950">
                 <img
                   src={capturedPreview}
                   alt="Captured Look"
                   className="object-contain max-h-[440px] w-auto mx-auto rounded-lg"
                 />
-                <div className="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-xs text-amber-300 font-medium">
+                <div className="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-xs text-sage-300 font-medium">
                   ✓ 照片已備妥
                 </div>
               </div>
@@ -242,7 +242,7 @@ export const CameraCaptureModal: React.FC<CameraCaptureModalProps> = ({
                 </button>
                 <button
                   onClick={handleConfirm}
-                  className="px-7 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-neutral-950 font-bold text-sm shadow-lg shadow-amber-500/20 transition flex items-center gap-2"
+                  className="px-7 py-2.5 rounded-xl bg-sage-700 hover:bg-sage-600 border border-sage-500/30 text-white font-bold text-sm shadow-lg shadow-black/20 transition flex items-center gap-2"
                 >
                   <Sparkles className="w-4 h-4" />
                   開始 AI 造型評鑑
@@ -259,7 +259,7 @@ export const CameraCaptureModal: React.FC<CameraCaptureModalProps> = ({
                       <p className="text-sm text-red-400 font-medium">{cameraError}</p>
                       <button
                         onClick={() => setActiveTab('upload')}
-                        className="px-4 py-2 bg-amber-500 text-neutral-950 rounded-lg font-bold text-xs hover:bg-amber-400 transition"
+                        className="px-4 py-2 bg-sage-500 text-neutral-950 rounded-lg font-bold text-xs hover:bg-sage-400 transition"
                       >
                         切換至照片上傳
                       </button>
@@ -284,7 +284,7 @@ export const CameraCaptureModal: React.FC<CameraCaptureModalProps> = ({
                       {/* Countdown badge */}
                       {countdown !== null && (
                         <div className="absolute inset-0 z-20 flex items-center justify-center bg-black/40 backdrop-blur-sm">
-                          <span className="text-7xl font-extrabold text-amber-400 animate-ping">
+                          <span className="text-7xl font-extrabold text-sage-400 animate-ping">
                             {countdown}
                           </span>
                         </div>
@@ -292,13 +292,13 @@ export const CameraCaptureModal: React.FC<CameraCaptureModalProps> = ({
 
                       {/* Framing guide overlay */}
                       {frameGuide !== 'none' && (
-                        <div className="absolute inset-0 pointer-events-none border-[1.5px] border-amber-400/30 m-6 rounded-xl flex flex-col justify-between p-4">
-                          <div className="flex justify-between items-center text-[10px] text-amber-300 font-mono tracking-widest uppercase">
+                        <div className="absolute inset-0 pointer-events-none border-[1.5px] border-sage-400/30 m-6 rounded-xl flex flex-col justify-between p-4">
+                          <div className="flex justify-between items-center text-[10px] text-sage-300 font-mono tracking-widest uppercase">
                             <span>[OOTD GUIDE]</span>
                             <span>{frameGuide === 'full' ? 'FULL BODY' : 'UPPER TORSO'}</span>
                           </div>
                           {frameGuide === 'full' && (
-                            <div className="border-t border-dashed border-amber-400/25 w-full self-center my-auto py-1 text-center text-[10px] text-amber-400/60 font-mono">
+                            <div className="border-t border-dashed border-sage-400/25 w-full self-center my-auto py-1 text-center text-[10px] text-sage-400/60 font-mono">
                               — 腰線建議基準線 (WAISTLINE) —
                             </div>
                           )}
@@ -326,7 +326,7 @@ export const CameraCaptureModal: React.FC<CameraCaptureModalProps> = ({
                             )
                           }
                           title="切換引導線"
-                          className="px-2 py-1 rounded-full bg-black/60 backdrop-blur-md text-[11px] text-amber-400 hover:bg-black/90 border border-white/20 transition"
+                          className="px-2 py-1 rounded-full bg-black/60 backdrop-blur-md text-[11px] text-sage-400 hover:bg-black/90 border border-white/20 transition"
                         >
                           {frameGuide === 'full' ? '全身' : frameGuide === 'half' ? '半身' : '無標線'}
                         </button>
@@ -337,9 +337,9 @@ export const CameraCaptureModal: React.FC<CameraCaptureModalProps> = ({
                         <button
                           onClick={triggerSnapshot}
                           disabled={countdown !== null}
-                          className="w-18 h-18 rounded-full border-4 border-amber-400 bg-white/20 hover:bg-amber-400/30 backdrop-blur-sm p-1.5 transition active:scale-95 shadow-xl flex items-center justify-center group"
+                          className="w-18 h-18 rounded-full border-4 border-sage-400 bg-white/20 hover:bg-sage-400/30 backdrop-blur-sm p-1.5 transition active:scale-95 shadow-xl flex items-center justify-center group"
                         >
-                          <div className="w-full h-full bg-amber-400 rounded-full group-hover:bg-amber-300 transition shadow" />
+                          <div className="w-full h-full bg-sage-400 rounded-full group-hover:bg-sage-300 transition shadow" />
                         </button>
                       </div>
                     </>
@@ -351,7 +351,7 @@ export const CameraCaptureModal: React.FC<CameraCaptureModalProps> = ({
               {activeTab === 'upload' && (
                 <div
                   onClick={() => fileInputRef.current?.click()}
-                  className="w-full max-w-md aspect-[4/3] border-2 border-dashed border-neutral-700 hover:border-amber-400/70 rounded-2xl bg-neutral-950/50 flex flex-col items-center justify-center p-6 text-center cursor-pointer transition group"
+                  className="w-full max-w-md aspect-[4/3] border-2 border-dashed border-neutral-700 hover:border-sage-400/70 rounded-2xl bg-neutral-950/50 flex flex-col items-center justify-center p-6 text-center cursor-pointer transition group"
                 >
                   <input
                     ref={fileInputRef}
@@ -360,7 +360,7 @@ export const CameraCaptureModal: React.FC<CameraCaptureModalProps> = ({
                     onChange={handleFileChange}
                     className="hidden"
                   />
-                  <div className="p-4 rounded-full bg-neutral-800 group-hover:bg-amber-500/20 text-neutral-400 group-hover:text-amber-400 mb-3 transition">
+                  <div className="p-4 rounded-full bg-neutral-800 group-hover:bg-sage-500/20 text-neutral-400 group-hover:text-sage-400 mb-3 transition">
                     <Upload className="w-8 h-8" />
                   </div>
                   <h3 className="text-base font-semibold text-neutral-200 group-hover:text-white mb-1">
@@ -386,7 +386,7 @@ export const CameraCaptureModal: React.FC<CameraCaptureModalProps> = ({
                           onSelectSample(sample);
                           onClose();
                         }}
-                        className="group bg-neutral-950 border border-neutral-800 hover:border-amber-400/80 rounded-xl overflow-hidden cursor-pointer transition shadow-md hover:shadow-amber-500/10 flex flex-col"
+                        className="group bg-neutral-950 border border-neutral-800 hover:border-sage-400/80 rounded-xl overflow-hidden cursor-pointer transition shadow-md hover:shadow-sage-500/10 flex flex-col"
                       >
                         <div className="relative aspect-[3/4] overflow-hidden bg-neutral-900">
                           <img
@@ -394,12 +394,12 @@ export const CameraCaptureModal: React.FC<CameraCaptureModalProps> = ({
                             alt={sample.name}
                             className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                           />
-                          <div className="absolute top-2 right-2 bg-black/75 px-2 py-0.5 rounded text-[11px] font-bold text-amber-400 border border-amber-500/30">
+                          <div className="absolute top-2 right-2 bg-black/75 px-2 py-0.5 rounded text-[11px] font-bold text-sage-400 border border-sage-500/30">
                             {sample.sampleAnalysis.grade} 級 • {sample.sampleAnalysis.score}分
                           </div>
                         </div>
                         <div className="p-3">
-                          <h4 className="text-xs font-bold text-white group-hover:text-amber-300 transition truncate">
+                          <h4 className="text-xs font-bold text-white group-hover:text-sage-300 transition truncate">
                             {sample.name}
                           </h4>
                           <p className="text-[11px] text-neutral-400 mt-0.5">{sample.style}</p>

@@ -25,7 +25,7 @@ export const OutfitHistoryDrawer: React.FC<OutfitHistoryDrawerProps> = ({
         {/* Header */}
         <div className="p-5 border-b border-neutral-800 flex items-center justify-between bg-neutral-950/80">
           <div className="flex items-center gap-2.5">
-            <div className="p-2 rounded-lg bg-amber-500/10 text-amber-400">
+            <div className="p-2 rounded-lg bg-sage-500/10 text-sage-400">
               <Clock className="w-5 h-5" />
             </div>
             <div>
@@ -45,7 +45,7 @@ export const OutfitHistoryDrawer: React.FC<OutfitHistoryDrawerProps> = ({
         <div className="flex-1 overflow-y-auto p-4 space-y-3">
           {history.length === 0 ? (
             <div className="h-64 flex flex-col items-center justify-center text-center p-6 text-neutral-500">
-              <Award className="w-10 h-10 mb-2 opacity-40 text-amber-400" />
+              <Award className="w-10 h-10 mb-2 opacity-40 text-sage-400" />
               <p className="text-sm font-medium">尚無評鑑紀錄</p>
               <p className="text-xs text-neutral-500 mt-1">
                 拍下第一張照片或試用示範穿搭，AI 造型師將在此為您保存每套造型報告！
@@ -59,7 +59,7 @@ export const OutfitHistoryDrawer: React.FC<OutfitHistoryDrawerProps> = ({
                   onSelectOutfit(item);
                   onClose();
                 }}
-                className="group p-3 bg-neutral-950 border border-neutral-800 hover:border-amber-400/80 rounded-xl cursor-pointer transition flex items-center gap-3.5 shadow-sm"
+                className="group p-3 bg-neutral-950 border border-neutral-800 hover:border-sage-400/80 rounded-xl cursor-pointer transition flex items-center gap-3.5 shadow-sm"
               >
                 <div className="relative w-16 h-20 rounded-lg overflow-hidden bg-neutral-900 shrink-0 border border-neutral-800">
                   <img
@@ -67,17 +67,17 @@ export const OutfitHistoryDrawer: React.FC<OutfitHistoryDrawerProps> = ({
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition"
                   />
-                  <div className="absolute top-1 right-1 bg-black/80 px-1.5 py-0.2 rounded text-[10px] font-bold text-amber-400">
+                  <div className="absolute top-1 right-1 bg-black/80 px-1.5 py-0.2 rounded text-[10px] font-bold text-sage-400">
                     {item.grade}
                   </div>
                 </div>
 
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between mb-1">
-                    <h4 className="text-xs font-bold text-white group-hover:text-amber-300 transition truncate">
+                    <h4 className="text-xs font-bold text-white group-hover:text-sage-300 transition truncate">
                       {item.title}
                     </h4>
-                    <span className="text-xs font-extrabold text-amber-400 font-mono shrink-0 ml-1">
+                    <span className="text-xs font-extrabold text-sage-400 font-mono shrink-0 ml-1">
                       {item.score}分
                     </span>
                   </div>
@@ -92,7 +92,7 @@ export const OutfitHistoryDrawer: React.FC<OutfitHistoryDrawerProps> = ({
                   </p>
                 </div>
 
-                <ChevronRight className="w-4 h-4 text-neutral-600 group-hover:text-amber-400 group-hover:translate-x-0.5 transition shrink-0" />
+                <ChevronRight className="w-4 h-4 text-neutral-600 group-hover:text-sage-400 group-hover:translate-x-0.5 transition shrink-0" />
               </div>
             ))
           )}
