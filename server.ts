@@ -359,4 +359,9 @@ async function setupVite() {
   });
 }
 
-setupVite();
+// Vercel serves the frontend separately and imports this app as a function.
+if (!process.env.VERCEL) {
+  setupVite();
+}
+
+export default app;
